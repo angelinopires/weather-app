@@ -16,7 +16,6 @@ class CardList extends Component {
             const lat = location.coords.latitude
             const lon = location.coords.longitude
             let url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=6a19c8fbc463b9423a455d519b4ab365`
-            console.log(url)
 
             fetch(url)
                 .then(response => {
@@ -42,8 +41,7 @@ class CardList extends Component {
                 return <Card key={index} item={item} />
             }
         })
-        
-        
+    
         return (
             <div>
                 {newArray}
