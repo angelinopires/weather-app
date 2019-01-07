@@ -1,3 +1,84 @@
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#weather {
+    width: 100%;
+    height: 100%;
+}
+.card-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .card {
-    border: 1px solid black;
+    width: 50%;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+.card__title {
+    width: 100%;
+    margin: 0 0 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.card__title--city {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+.card__img {
+    max-width: 100%;
+}
+.card__temperature {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.card__temperature--max {
+    color: black;
+}
+.card__temperature--min {
+    color: grey;
+}
+.card__temperature p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: auto 8px;
+}
+
+@media only screen and (min-width: 576px) {
+    .card {
+        width: 33%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .card {
+        width: 25%
+    }
+    .card__title--city {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .card-list {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .card {
+        width: 22%;
+    }
 }

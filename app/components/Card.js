@@ -1,7 +1,12 @@
 import React from 'react'
 
 function Card(props) {
-    let temp, minTemp, maxTemp
+    let day, hours, temp, minTemp, maxTemp
+    let options = { weekday: 'long' }
+
+    day = new Date(props.item.dt_txt)
+    hours = new Date().getHours()
+    day = new Intl.DateTimeFormat('en-US', options).format(day)
 
     temp = Math.round(props.item.main.temp - 273,15)
     minTemp = Math.round(props.item.main.temp_min - 273,15)
@@ -9,10 +14,23 @@ function Card(props) {
 
     return (
         <div className="card">
-            <h1 className="card__title">{temp}</h1>
-            <img src="#" className="card__img"/>
-            <p className="card__max-temperature">{maxTemp}</p>
-            <p className="card__min-temperature">{minTemp}</p>
+            <h2 className="card__title">{day}</h2>
+            <h2 className="card__title">{temp}º</h2>
+
+            <figure className="card__img">
+                <img 
+                    src={
+                        hours > 18 && hours < 6 
+                        ? "../src/img/icons/" + props.item.weather[0].main + "-night.png"
+                        : "../src/img/icons/" + props.item.weather[0].main + ".png"
+                    } 
+                    className="card__img"
+                />
+            </figure>
+            <div className="card__temperature">
+                <p className="card__temperature--min">{minTemp}º</p>
+                <p className="card__temperature--max">{maxTemp}º</p>
+            </div>
         </div>
     )
 }

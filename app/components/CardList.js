@@ -6,8 +6,10 @@ class CardList extends Component {
         super()
         this.state = {
             weather: {
-                list: []
-            }
+                list: [],
+                city: ''
+            },
+            days: []
         }
     }
 
@@ -26,7 +28,8 @@ class CardList extends Component {
                 })
                 .then(data => {
                     this.setState({
-                        weather: data
+                        weather: data,
+                        days: data.list.map(day => day.dt_txt),
                     })
                 })
                 .catch(error => console.log(error)) 
@@ -34,16 +37,18 @@ class CardList extends Component {
     }
 
     render() {
-        console.log(this.state.weather.list)
+        let lastDay 
+
         const newArray = this.state.weather.list.map((item, index) => {
-            if (item.dt_txt.includes('00:00:00')) {
+            if (!item.dt_txt.includes(lastDay)) {
                 console.log(item)
-                return <Card key={index} item={item} />
+                lastDay = item.dt_txt.slice(0, 10)
+                return <Card key={index} item={item}/>
             }
         })
-    
         return (
-            <div>
+            <div className="card-list">
+                <h1 className="card__title--city">{this.state.weather.city.name}</h1>
                 {newArray}
             </div>
         )
