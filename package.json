@@ -1,12 +1,12 @@
 {
   "name": "weather-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A weather app builded with React.js",
   "main": "index.js",
   "scripts": {
     "build": "webpack-dev-server"
   },
-  "author": "",
+  "author": "Angelino Pires",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.24.0",
