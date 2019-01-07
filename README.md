@@ -11,4 +11,4 @@ Just praticing my skills and knowledge of React.
 - [Open Weather API Docs](https://openweathermap.org/current)
 
 ## Additional comments
-This is my first Application builded with React, so I kept it simple and functional. It took me 2 days and alot of Coffe and good music. If you have hints, tips or anything, just send me! I will be to glad to improve even more <3
+This is my first Application builded with React, so I kept it simple and functional. It took me 2 days and alot of Coffe and good music. If you have hints, tips or anything, just send me! I will be glad to learn and improve even more my Skills <3
