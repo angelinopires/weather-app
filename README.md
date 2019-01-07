@@ -11,4 +11,4 @@ Just praticing my skills and knowledge of React.
 ## Additional comments
 This is my first Application builded with React, so I kept it simple and functional. It took me 2 days and alot of Coffe and good music. If you have hints, tips or anything, just say it :)
 
-![](https://media.giphy.com/media/3o7TKzvWqnLjZ32EQ8/giphy.gif | width=300)
+<img src="https://media.giphy.com/media/3o7TKzvWqnLjZ32EQ8/giphy.gif" width="300" height="300">
