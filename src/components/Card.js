@@ -1,5 +1,4 @@
 import React from 'react'
-import '../sass/main.scss'
 
 const Card = props => {
     let day, hours, temp, minTemp, maxTemp
@@ -21,7 +20,7 @@ const Card = props => {
             <figure className="card__img">
                 <img 
                     src={
-                        hours > 18 && hours < 6 
+                        hours >= 18 && hours < 6 
                         ? "img/icons/" + props.item.weather[0].main + "-night.png"
                         : "img/icons/" + props.item.weather[0].main + ".png"
                     } 

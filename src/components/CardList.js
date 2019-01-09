@@ -38,7 +38,7 @@ class CardList extends Component {
 
     render() {
         let lastDay 
-
+        
         const newArray = this.state.weather.list.map((item, index) => {
             if (!item.dt_txt.includes(lastDay)) {
                 console.log(item)
