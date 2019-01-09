@@ -1,6 +1,7 @@
 import React from 'react'
+import '../sass/main.scss'
 
-function Card(props) {
+const Card = props => {
     let day, hours, temp, minTemp, maxTemp
     let options = { weekday: 'long' }
 
@@ -21,8 +22,8 @@ function Card(props) {
                 <img 
                     src={
                         hours > 18 && hours < 6 
-                        ? "../src/img/icons/" + props.item.weather[0].main + "-night.png"
-                        : "../src/img/icons/" + props.item.weather[0].main + ".png"
+                        ? "img/icons/" + props.item.weather[0].main + "-night.png"
+                        : "img/icons/" + props.item.weather[0].main + ".png"
                     } 
                     className="card__img"
                 />
